@@ -1,0 +1,36 @@
+#include <iostream> 
+
+using namespace std;
+void polindrom() {
+    setlocale(LC_ALL, "Russian");
+    char str[90];
+    cin.getline(str, 90);
+    int l;
+    int d; int r = 0;
+    int len = strlen(str) - 1;
+    l = (len / 2);
+    for (d = 0; d <= l; d++) {
+        if (str[d] != str[len - d]) {
+            r = 0;
+            break;
+        }
+        else {
+            r = 1;
+            d++;
+        }
+    }
+
+    if (r == 0) {
+        cout << "не палиндром";
+    }
+    else {
+        cout << "палиндром";
+    }
+}
+
+
+int main()
+
+{
+    polindrom();
+}
